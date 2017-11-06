@@ -1,0 +1,24 @@
+/* Food that will go into a pantry */
+CREATE TABLE food
+( food_id SMALLINT,
+food_group VARCHAR(20),
+date_purchased DATE,
+date_consumed DATE,
+expiration_date DATE,
+CONSTRAINT pk_food PRIMARY KEY (food_id)
+);
+
+/* Fruit in the pantry */
+CREATE TABLE fruit
+( food_id SMALLINT,
+fruit_type VARCHAR(20),
+CONSTRAINT pk_fruit PRIMARY KEY (food_id, fruit_type),
+CONSTRAINT fk_fruit_food_id FOREIGN KEY (food_id)
+  REFERENCES food (food_id)
+);
+
+/* Find food that hasn't been consumed */
+CREATE VIEW present_food_vw AS
+SELECT food_id, food_group, date_purchased, expiration_date
+FROM food
+WHERE date_consumed IS NULL;
