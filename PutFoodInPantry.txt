@@ -1,13 +1,13 @@
 /* Put apple in pantry */
 INSERT INTO food
 (food_id, food_group, date_purchased, expiration_date )
-VALUES (1, 'fruit', '11/6/2017', '12/21/2018' );
+VALUES (1, 'fruit', '2017-11-6', '2017-12-21' );
 INSERT INTO fruit (food_id, fruit_type)
 VALUES (1, 'apple');
 
 /* Put orange in pantry */
 INSERT INTO food
 (food_id, food_group, date_purchased, expiration_date )
-VALUES (2, 'fruit', '11/7/2017', '12/22/2018' );
+VALUES (2, 'fruit', '2017-11-7', '2017-12-22' );
 INSERT INTO fruit (food_id, fruit_type)
 VALUES (2, 'orange');
