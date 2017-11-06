@@ -1,4 +1,4 @@
 /* Eat the apple */
 UPDATE food
-SET date_consumed = '12/20/2018'
+SET date_consumed = '2017-12-1'
 WHERE food_id = 1;
