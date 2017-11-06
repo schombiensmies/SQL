@@ -1,0 +1,4 @@
+/* Find all the fruit that hasn't been eaten yet */
+SELECT DISTINCT food.food_id, food.food_group, food.date_purchased, food.date_consumed, food.expiration_date, fruit.fruit_type
+FROM food INNER JOIN  fruit
+ON food.food_id = fruit.food_id AND date_consumed IS NULL;
